@@ -81,6 +81,7 @@ Query OK, 0 rows affected (0.00 sec)
 mysql> select * from customers where grade = 200;
 ERROR 1146 (42S02): Table 'prac1.customers' doesn't exist
 mysql> select * from customer where grade = 200;
+
 +-------------+--------------+------------+-------+-------------+
 | customer_id | cust_name    | city       | grade | salesman_id |
 +-------------+--------------+------------+-------+-------------+
