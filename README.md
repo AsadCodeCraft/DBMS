@@ -1,2 +1,2 @@
 # Practical 1
-`mysql -u [username] -p[password] [database_name] < [input_file.sql]`
+`mysql -u root -p database_name < prac1_backup.sql`
