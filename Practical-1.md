@@ -129,6 +129,20 @@ mysql> select * from orders;
   6 rows in set (0.00 sec)
 ```
 > ### **Q.2) Retrieve salesman id of all salesmen from orders table without any repeats.**
+```
+mysql> select distinct(salesman_id) from orders;
++-------------+
+| salesman_id |
++-------------+
+|        5002 |
+|        5001 |
+|        5003 |
+|        5005 |
+|        5006 |
+|        5007 |
++-------------+
+6 rows in set (0.00 sec)
+```
 > ### **Q.3)Display names and city of salesman, who belongs to the city of Paris.**
 > ### **Q.4)Display all the information for those customers with a grade of 200.**
 > ### **Q.5)Display the order number, order date and the purchase amount for order(s) which will be delivered by the salesman with ID 5001**
