@@ -179,3 +179,20 @@ mysql> select ord_no, purch_amt from orders where salesman_id=5001;
 +--------+-----------+
 4 rows in set (0.00 sec)
 ```
+
+> ### **Q.21)Find the highest purchase amount ordered by each customer on a particular date with their ID, order date and highest purchase amount.**
+```
+mysql> select customer_id, ord_date, purch_amt from orders where purch_amt in (select max(purch_amt) from orders group by ord_date);
++-------------+------------+-----------+
+| customer_id | ord_date   | purch_amt |
++-------------+------------+-----------+
+|        3005 | 2012-10-05 |       151 |
+|        3009 | 2012-10-10 |      2480 |
+|        3009 | 2012-08-17 |       111 |
+|        3007 | 2012-07-27 |      2401 |
+|        3002 | 2012-09-10 |      5760 |
+|        3008 | 2012-06-27 |       250 |
+|        3002 | 2012-04-25 |      3046 |
++-------------+------------+-----------+
+7 rows in set (0.01 sec)
+```
