@@ -1,7 +1,8 @@
 ## 🚀 **Practical 1**
 
-### 🫥 Creating Database
+- **Creating Database**
 ```
+
 mysql> show databases;
 +--------------------+
 | Database           |
@@ -17,3 +18,4 @@ Query OK, 1 row affected (0.11 sec)
 mysql> use prac1;
 Database changed
 ```
+
