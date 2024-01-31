@@ -179,7 +179,16 @@ mysql> select ord_no, purch_amt from orders where salesman_id=5001;
 +--------+-----------+
 4 rows in set (0.00 sec)
 ```
-
+> ### **Q.16)Find that customer with all information who does not get any grade except NULL.**
+```
+mysql> select * from customer where grade is null;
++-------------+------------+--------+-------+-------------+
+| customer_id | cust_name  | city   | grade | salesman_id |
++-------------+------------+--------+-------+-------------+
+|        3001 | Brad Guzan | London |  NULL |        5005 |
++-------------+------------+--------+-------+-------------+
+1 row in set (0.00 sec)
+```
 > ### **Q.21)Find the highest purchase amount ordered by each customer on a particular date with their ID, order date and highest purchase amount.**
 ```
 mysql> select customer_id, ord_date, purch_amt from orders where purch_amt in (select max(purch_amt) from orders group by ord_date);
