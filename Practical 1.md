@@ -1,13 +1,3 @@
-## Practial 1
-```
-mysql> show databases;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| mysql              |
-| performance_schema |
-| sys                |
-+--------------------+
-4 rows in set (0.00 sec)
-```
+## 🚀 Practical 1 
+
+### Creating Database
