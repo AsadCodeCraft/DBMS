@@ -22,7 +22,19 @@ Database changed
 
 - **Creating tables**
 ```
+mysql> CREATE TABLE `salesman` (`salesman_id` int, `name` text,`city` text,`comission` float,PRIMARY KEY (`salesman_id`));
+Query OK, 0 rows affected (0.25 sec)
 
+mysql> desc salesman;
++-------------+-------+------+-----+---------+-------+
+| Field       | Type  | Null | Key | Default | Extra |
++-------------+-------+------+-----+---------+-------+
+| salesman_id | int   | NO   | PRI | NULL    |       |
+| name        | text  | YES  |     | NULL    |       |
+| city        | text  | YES  |     | NULL    |       |
+| comission   | float | YES  |     | NULL    |       |
++-------------+-------+------+-----+---------+-------+
+4 rows in set (0.03 sec)
 ```
 - **Importing data into table using csv**
 ```
