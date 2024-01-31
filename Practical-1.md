@@ -21,9 +21,10 @@ Database changed
 ```
 
 - **Creating tables**
-  ```
-  
-  ```
+```
+
+```
 - **Importing data into table using csv**
-  ```
-  ```
+```
+
+```
