@@ -115,19 +115,19 @@ mysql> select * from orders;
 
 > ### **Q.1) Display name and commission for all the salesmen.**
 > ```
-> mysql> select name, comission from salesman;
-+------------+-----------+
-| name       | comission |
-+------------+-----------+
-| James Hoog |      0.15 |
-| Nail Knite |      0.13 |
-| Lauson Hen |      0.12 |
-| Pit Alex   |      0.11 |
-| Mc Lyon    |      0.14 |
-| Paul Adam  |      0.13 |
-+------------+-----------+
-6 rows in set (0.00 sec)
-> ```
+ mysql> select name, comission from salesman;
+  +------------+-----------+
+  | name       | comission |
+  +------------+-----------+
+  | James Hoog |      0.15 |
+  | Nail Knite |      0.13 |
+  | Lauson Hen |      0.12 |
+  | Pit Alex   |      0.11 |
+  | Mc Lyon    |      0.14 |
+  | Paul Adam  |      0.13 |
+  +------------+-----------+
+  6 rows in set (0.00 sec)
+  ```
 > ### **Q.2) Retrieve salesman id of all salesmen from orders table without any repeats.**
 > ### **Q.3)Display names and city of salesman, who belongs to the city of Paris.**
 > ### **Q.4)Display all the information for those customers with a grade of 200.**
