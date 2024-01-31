@@ -1,7 +1,7 @@
 ## 🚀 **Practical 1**
 
 - **Creating Database**
-  ```
+```
 mysql> show databases;
 +--------------------+
 | Database           |
@@ -18,7 +18,7 @@ mysql> show databases;
 
   mysql> use prac1;
   Database changed
-  ```
+```
 
 - **Creating tables**
   ```
