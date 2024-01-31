@@ -20,7 +20,7 @@ mysql> use prac1;
 Database changed
 ```
 
-### > **Creating tables**
+> ###  **Creating tables**
 ```
 mysql> CREATE TABLE `salesman` (`salesman_id` int, `name` text,`city` text,`comission` float,PRIMARY KEY (`salesman_id`));
 Query OK, 0 rows affected (0.25 sec)
