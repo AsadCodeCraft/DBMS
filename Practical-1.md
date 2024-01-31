@@ -1,6 +1,6 @@
 ## 🚀 **Practical 1**
 
-### **Creating Database**
+### > **Creating Database**
 ```
 mysql> show databases;
 +--------------------+
