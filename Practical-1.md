@@ -52,7 +52,7 @@ Records: 6  Deleted: 0  Skipped: 0  Warnings: 0
 ```
 **Similarly Create Table for ***Customers & Orders*****
 
-### Show tables data
+### > **Show tables data**
 
 ```
 mysql> show tables;
