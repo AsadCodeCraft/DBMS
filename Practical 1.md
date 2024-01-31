@@ -1,5 +1,6 @@
-mysql> show databases
-    -> ;
+## Practial 1
+```
+mysql> show databases;
 +--------------------+
 | Database           |
 +--------------------+
@@ -8,4 +9,5 @@ mysql> show databases
 | performance_schema |
 | sys                |
 +--------------------+
-4 rows in set (0.15 sec)
+4 rows in set (0.00 sec)
+```
