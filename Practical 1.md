@@ -20,3 +20,10 @@ mysql> use prac1;
 Database changed
 ```
 
+- **Creating tables**
+  ```
+  
+  ```
+- **Importing data into table using csv**
+  ```
+  ```
