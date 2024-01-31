@@ -1,6 +1,6 @@
 ## 🚀 **Practical 1**
 
-- ### **Creating Database**
+### **Creating Database**
 ```
 mysql> show databases;
 +--------------------+
@@ -20,7 +20,7 @@ mysql> use prac1;
 Database changed
 ```
 
-- **Creating tables**
+### **Creating tables**
 ```
 mysql> CREATE TABLE `salesman` (`salesman_id` int, `name` text,`city` text,`comission` float,PRIMARY KEY (`salesman_id`));
 Query OK, 0 rows affected (0.25 sec)
@@ -36,7 +36,8 @@ mysql> desc salesman;
 +-------------+-------+------+-----+---------+-------+
 4 rows in set (0.03 sec)
 ```
-- **Importing data into table using csv**
+
+### **Importing data into table using csv**
 
 **Note: keep the file in path as follwos C:/ProgramData/MySQL/MySQL Server 8.3/Uploads/**
 
