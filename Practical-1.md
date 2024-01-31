@@ -114,7 +114,7 @@ mysql> select * from orders;
 ```
 
 > ### **Q.1) Display name and commission for all the salesmen.**
-> ```
+```
  mysql> select name, comission from salesman;
   +------------+-----------+
   | name       | comission |
@@ -127,7 +127,7 @@ mysql> select * from orders;
   | Paul Adam  |      0.13 |
   +------------+-----------+
   6 rows in set (0.00 sec)
-  ```
+```
 > ### **Q.2) Retrieve salesman id of all salesmen from orders table without any repeats.**
 > ### **Q.3)Display names and city of salesman, who belongs to the city of Paris.**
 > ### **Q.4)Display all the information for those customers with a grade of 200.**
