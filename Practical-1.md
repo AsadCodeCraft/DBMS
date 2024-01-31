@@ -22,6 +22,9 @@ Database changed
 
 - **Creating tables**
 ```
+**Note: keep the file in path as follwos C:/ProgramData/MySQL/MySQL Server 8.3/Uploads/**
+```
+```
 mysql> CREATE TABLE `salesman` (`salesman_id` int, `name` text,`city` text,`comission` float,PRIMARY KEY (`salesman_id`));
 Query OK, 0 rows affected (0.25 sec)
 
@@ -38,5 +41,11 @@ mysql> desc salesman;
 ```
 - **Importing data into table using csv**
 ```
-
+mysql> load data infile "C:/ProgramData/MySQL/MySQL Server 8.3/Uploads/salesman.csv"
+    -> into table salesman
+    -> fields terminated by ',' enclosed by '"'
+    -> lines terminated by '\n'
+    -> ignore 1 rows;
+Query OK, 6 rows affected (0.05 sec)
+Records: 6  Deleted: 0  Skipped: 0  Warnings: 0
 ```
