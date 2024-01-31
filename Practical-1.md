@@ -37,7 +37,9 @@ mysql> desc salesman;
 4 rows in set (0.03 sec)
 ```
 - **Importing data into table using csv**
+
 **Note: keep the file in path as follwos C:/ProgramData/MySQL/MySQL Server 8.3/Uploads/**
+
 ```
 mysql> load data infile "C:/ProgramData/MySQL/MySQL Server 8.3/Uploads/salesman.csv"
     -> into table salesman
