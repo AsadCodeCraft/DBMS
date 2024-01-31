@@ -144,5 +144,38 @@ mysql> select distinct(salesman_id) from orders;
 6 rows in set (0.00 sec)
 ```
 > ### **Q.3)Display names and city of salesman, who belongs to the city of Paris.**
+```
+mysql> select name, city from salesman where city = "paris";
++------------+-------+
+| name       | city  |
++------------+-------+
+| Nail Knite | Paris |
+| Mc Lyon    | Paris |
++------------+-------+
+2 rows in set (0.00 sec)
+```
 > ### **Q.4)Display all the information for those customers with a grade of 200.**
+```
+mysql> select * from customer where grade = 200;
++-------------+--------------+------------+-------+-------------+
+| customer_id | cust_name    | city       | grade | salesman_id |
++-------------+--------------+------------+-------+-------------+
+|        3003 | Jozy Altidor | Moscow     |   200 |        5007 |
+|        3005 | Graham Zusi  | California |   200 |        5002 |
+|        3007 | Brad Davis   | New York   |   200 |        5001 |
++-------------+--------------+------------+-------+-------------+
+3 rows in set (0.00 sec)
+```
 > ### **Q.5)Display the order number, order date and the purchase amount for order(s) which will be delivered by the salesman with ID 5001**
+```
+mysql> select ord_no, purch_amt from orders where salesman_id=5001;
++--------+-----------+
+| ord_no | purch_amt |
++--------+-----------+
+|  70002 |        65 |
+|  70005 |      2401 |
+|  70008 |      5760 |
+|  70013 |      3046 |
++--------+-----------+
+4 rows in set (0.00 sec)
+```
