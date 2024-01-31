@@ -22,9 +22,6 @@ Database changed
 
 - **Creating tables**
 ```
-**Note: keep the file in path as follwos C:/ProgramData/MySQL/MySQL Server 8.3/Uploads/**
-```
-```
 mysql> CREATE TABLE `salesman` (`salesman_id` int, `name` text,`city` text,`comission` float,PRIMARY KEY (`salesman_id`));
 Query OK, 0 rows affected (0.25 sec)
 
@@ -40,6 +37,7 @@ mysql> desc salesman;
 4 rows in set (0.03 sec)
 ```
 - **Importing data into table using csv**
+**Note: keep the file in path as follwos C:/ProgramData/MySQL/MySQL Server 8.3/Uploads/**
 ```
 mysql> load data infile "C:/ProgramData/MySQL/MySQL Server 8.3/Uploads/salesman.csv"
     -> into table salesman
