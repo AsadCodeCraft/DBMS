@@ -1,4 +1,4 @@
-## 🚀 **Practical 1 : DDL operations on Relational Schema **
+## 🚀 **Practical 1 DDL operations on Relational Schema**
 
 ### > **Creating Database**
 ```
