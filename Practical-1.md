@@ -179,17 +179,51 @@ mysql> select ord_no, purch_amt from orders where salesman_id=5001;
 +--------+-----------+
 4 rows in set (0.00 sec)
 ```
-> ### **Q.12)**
+> ### **Q.12)Display all the customers, who are either belongs to the city New York or not had a grade above 100**
 ```
+mysql> select * from customer where city='New York' or not grade >100;
++-------------+---------------+----------+-------+-------------+
+| customer_id | cust_name     | city     | grade | salesman_id |
++-------------+---------------+----------+-------+-------------+
+|        3002 | Nick Rimando  | New York |   100 |        5001 |
+|        3007 | Brad Davis    | New York |   200 |        5001 |
+|        3009 | Geoff Cameron | Berlin   |   100 |        5003 |
++-------------+---------------+----------+-------+-------------+
+3 rows in set (0.34 sec)
 ```
-> ### **Q.13)**
+> ### **Q.13)Find those salesmen with all information who gets the commission within a range of 0.12 and 0.14.**
 ```
+mysql> select salesman_id,name,city,comission from salesman where comission between 0.12 and 0.14;
++-------------+------------+-------+-----------+
+| salesman_id | name       | city  | comission |
++-------------+------------+-------+-----------+
+|        5002 | Nail Knite | Paris |      0.13 |
+|        5007 | Paul Adam  | Rome  |      0.13 |
++-------------+------------+-------+-----------+
+2 rows in set (0.04 sec)
 ```
-> ### **Q.14)**
+> ### **Q.14)Find all those customers with all information whose names are ending with the letter 'n'.**
 ```
+mysql> select * from customer where cust_name like '%n';
++-------------+----------------+--------+-------+-------------+
+| customer_id | cust_name      | city   | grade | salesman_id |
++-------------+----------------+--------+-------+-------------+
+|        3001 | Brad Guzan     | London |  NULL |        5005 |
+|        3004 | Fabian Johnson | Paris  |   300 |        5006 |
+|        3008 | Julian Green   | London |   300 |        5002 |
+|        3009 | Geoff Cameron  | Berlin |   100 |        5003 |
++-------------+----------------+--------+-------+-------------+
+4 rows in set (0.00 sec)
 ```
-> ### **Q.15)**
+> ### **Q.15)Find those salesmen with all information whose name containing the 1st character is 'N' and the 3rd character is 'l' and rests may be any character.**
 ```
+mysql> select * from salesman where name like 'n__l%';
++-------------+------------+-------+-----------+
+| salesman_id | name       | city  | comission |
++-------------+------------+-------+-----------+
+|        5002 | Nail Knite | Paris |      0.13 |
++-------------+------------+-------+-----------+
+1 row in set (0.00 sec)
 ```
 > ### **Q.16)Find that customer with all information who does not get any grade except NULL.**
 ```
@@ -201,17 +235,44 @@ mysql> select * from customer where grade is null;
 +-------------+------------+--------+-------+-------------+
 1 row in set (0.00 sec)
 ```
-> ### **Q.17)**
+> ### **Q.17)Find the total purchase amount of all orders. **
 ```
+mysql> select sum(purch_amt) as Total_Purchase_Amount from orders;
++-----------------------+
+| Total_Purchase_Amount |
++-----------------------+
+|                 17542 |
++-----------------------+
+1 row in set (0.01 sec)
 ```
-> ### **Q.18)**
+> ### **Q.18)Find the number of salesman currently listing for all of their customers.**
 ```
+mysql> select count(distinct salesman_id) as Count_of_Salesman from orders;
++-------------------+
+| Count_of_Salesman |
++-------------------+
+|                 6 |
++-------------------+
+1 row in set (0.00 sec)
 ```
-> ### **Q.19)**
+> ### **Q.19)Find the highest grade for each of the cities of the customers.**
 ```
+mysql> select city , max(grade) from customer group by city;
++------------+------------+
+| city       | max(grade) |
++------------+------------+
+| London     |        300 |
+| New York   |        200 |
+| Moscow     |        200 |
+| Paris      |        300 |
+| California |        200 |
+| Berlin     |        100 |
++------------+------------+
+6 rows in set (0.00 sec)
 ```
-> ### **Q.20)**
+> ### **Q.20)Find the highest purchase amount ordered by each customer with their ID and highest purchase amount.**
 ```
+
 ```
 > ### **Q.21)Find the highest purchase amount ordered by each customer on a particular date with their ID, order date and highest purchase amount.**
 ```
