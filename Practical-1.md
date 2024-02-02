@@ -303,13 +303,28 @@ mysql> select customer_id, ord_date, purch_amt from orders where purch_amt in (s
 +-------------+------------+-----------+
 7 rows in set (0.01 sec)
 ```
-> ### **Q.22)**
+> ### **Q.22) Find the highest purchase amount on a date '2012-08-17' for each salesman with their ID.**
 ```
+mysql> select salesman_id, purch_amt from orders where ord_date = '2012-08-17' order by purch_amt DESC LIMIT 1;
++-------------+-----------+
+| salesman_id | purch_amt |
++-------------+-----------+
+|        5003 |       111 |
++-------------+-----------+
+1 row in set (0.00 sec)
 ```
-> ### **Q.23)**
+> ### **Q.23)Find the highest purchase amount with their customer ID and order date, for only those customers who have the highest purchase amount in a day is more than 2000.**
 ```
+
 ```
-> ### **Q.24)**
+> ### **Q.24)Write a SQL statement that counts all orders for a date August 17th, 2012.**
 ```
+mysql> select count(*) as "Sales on 17th August" from orders where ord_date='2012-08-17';
++----------------------+
+| Sales on 17th August |
++----------------------+
+|                    2 |
++----------------------+
+1 row in set (0.00 sec)
 ```
 
