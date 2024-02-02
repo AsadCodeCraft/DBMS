@@ -272,7 +272,20 @@ mysql> select city , max(grade) from customer group by city;
 ```
 > ### **Q.20)Find the highest purchase amount ordered by each customer with their ID and highest purchase amount.**
 ```
-
+mysql> select customer_id,max(purch_amt) from orders group by customer_id order by 1;
++-------------+----------------+
+| customer_id | max(purch_amt) |
++-------------+----------------+
+|        3001 |            271 |
+|        3002 |           5760 |
+|        3003 |             75 |
+|        3004 |           1983 |
+|        3005 |            949 |
+|        3007 |           2401 |
+|        3008 |            250 |
+|        3009 |           2480 |
++-------------+----------------+
+8 rows in set (0.00 sec)
 ```
 > ### **Q.21)Find the highest purchase amount ordered by each customer on a particular date with their ID, order date and highest purchase amount.**
 ```
@@ -290,3 +303,13 @@ mysql> select customer_id, ord_date, purch_amt from orders where purch_amt in (s
 +-------------+------------+-----------+
 7 rows in set (0.01 sec)
 ```
+> ### **Q.22)**
+```
+```
+> ### **Q.23)**
+```
+```
+> ### **Q.24)**
+```
+```
+
