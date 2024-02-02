@@ -1,1 +1,1 @@
-## 🚀 Practical 2
+## **🚀 Practical 2 Subquery-join operations on Relational Schema**
