@@ -315,7 +315,7 @@ mysql> select salesman_id, purch_amt from orders where ord_date = '2012-08-17' o
 ```
 > ### **Q.23)Find the highest purchase amount with their customer ID and order date, for only those customers who have the highest purchase amount in a day is more than 2000.**
 ```
-mysql> SELECT customer_id, ord_date, MAX(purch_amt) FROM orders GROUP BY customer_id, ord_date HAVING MAX(purch_amt) > 2000;
+mysql> select customer_id, ord_date, max(purch_amt) from orders group by customer_id, ord_date having max(purch_amt) > 2000;
 +-------------+------------+----------------+
 | customer_id | ord_date   | MAX(purch_amt) |
 +-------------+------------+----------------+
