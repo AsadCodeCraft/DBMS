@@ -24,3 +24,16 @@ mysql> select salesman_id,name from salesman a where 1<(select count(*) from
 2 rows in set (0.01 sec)
 
 ```
+> ### **Q.3) Demonstrate the DELETE operation by removing salesman with id 1000. All his orders must also be deleted**
+```
+mysql> ALTER TABLE orders
+    -> ADD CONSTRAINT fk_salesman_id
+    -> FOREIGN KEY (salesman_id)
+    -> REFERENCES salesman(salesman_id)
+    -> ON DELETE CASCADE;
+Query OK, 12 rows affected (0.22 sec)
+Records: 12  Duplicates: 0  Warnings: 0
+
+mysql> DELETE FROM salesman where salesman_id = 5001;
+Query OK, 1 row affected (0.01 sec)
+```
