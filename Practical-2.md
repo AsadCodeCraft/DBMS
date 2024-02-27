@@ -42,6 +42,7 @@ Query OK, 1 row affected (0.01 sec)
 
 
 ## Q.2. Execute the following Queries on it: 
+
 > ### 1)List the titles of all movies directed by ‘Hitchcock’.
 ```
 select mov_title from movies where dir_id =
