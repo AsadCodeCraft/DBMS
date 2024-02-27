@@ -1,5 +1,7 @@
 ## **🚀 Practical 2 Subquery-join operations on Relational Schema**
-### **USING (practical 1)**
+
+## Q.1. USING (practical 1) 
+
 > ### **Q.1) Count the customers with grades above New York’s average.**
 ```
 mysql> select count(*) as Average_Count from customer where grade > (select avg(grade) from customer where city = "New York");
@@ -39,7 +41,7 @@ Query OK, 1 row affected (0.01 sec)
 ```
 
 
-## Q. 2
+## Q.2. Execute the following Queries on it: 
 > ### 1)List the titles of all movies directed by ‘Hitchcock’.
 ```
 select mov_title from movies where dir_id =
