@@ -135,6 +135,8 @@ output:
 db.users.findOne({name: "User1"}, {_id:0, age:0})
 ```
 
+*This returns the first document in the user's collection where the name field is "User1".*
+
 output:
 ```javascript
 [
