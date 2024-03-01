@@ -279,3 +279,54 @@ mysql> SELECT DISTINCT s.name
 +------------------+
 4 rows in set (0.01 sec)
 ```
+
+> ### 10) Find the telephone numbers of instructors who teach a course taken by any student who lives in Boston. 
+```javascript
+mysql> SELECT DISTINCT i.telno
+    -> FROM instructors i
+    -> JOIN grades g ON i.empno = g.empno
+    -> JOIN students s ON g.stno = s.stno
+    -> WHERE s.city = 'Boston';
++-------+
+| telno |
++-------+
+| 9101  |
+| 7122  |
+| 5110  |
+| 7024  |
++-------+
+4 rows in set (0.00 sec)
+```
+
+> ### 12) Find the names of students who took only one course. 
+```javascript
+mysql> SELECT s.name
+    -> FROM students s
+    -> JOIN (
+    ->     SELECT stno, COUNT(*) AS course_count
+    ->     FROM grades
+    ->     GROUP BY stno
+    -> ) AS student_courses ON s.stno = student_courses.stno
+    -> WHERE student_courses.course_count = 1;
++----------------+
+| name           |
++----------------+
+| Grogan A. Mary |
+| Novak Roland   |
++----------------+
+2 rows in set (0.00 sec)
+```
+
+> ### 13) Find the names of instructors who teach no course. 
+```javascript
+mysql> SELECT i.name
+    -> FROM instructors i
+    -> LEFT JOIN grades g ON i.empno = g.empno
+    -> WHERE g.empno IS NULL;
++---------------+
+| name          |
++---------------+
+| Davis William |
++---------------+
+1 row in set (0.00 sec)
+```
