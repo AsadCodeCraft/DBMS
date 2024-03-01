@@ -143,3 +143,99 @@ output:
   { name: 'User1', city: 'Mumbai' },
 ]
 ```
+### *🔥Update Operations*
+1. updateOne()
+```javascript
+ db.users.updateOne({ age: { $lt: 23 } }, { $set: { status: "active" } })
+```
+
+Output
+```javascript
+userdb> db.users.find({ age: { $lt: 23 } })
+[
+  {
+    _id: ObjectId('65e23306dcee93f57058570f'),
+    name: 'User1',
+    age: 22,
+    city: 'Mumbai',
+    status: 'active'
+  }
+]
+```
+
+2. updateMany()
+```javascript
+db.users.updateMany({ age: { $gt: 23 } }, { $set: { status: "inactive" } })
+```
+
+Output
+```javascript
+userdb> db.users.find({ age: { $gt: 23 } })
+[
+  {
+    _id: ObjectId('65e23306dcee93f570585710'),
+    name: 'User1',
+    age: 25,
+    city: 'Pune',
+    status: 'inactive'
+  },
+  {
+    _id: ObjectId('65e23306dcee93f570585711'),
+    name: 'User2',
+    age: 30,
+    city: 'Kalyan',
+    status: 'inactive'
+  }
+]
+```
+
+### *🔥Delete Operations*
+1. Delete Documents
+- deleteOne()
+
+```javascript
+db.users.deleteOne({ name: "User2" })
+```
+
+Output
+```javascript
+userdb> db.users.find({},{_id:0})
+[
+  { name: 'User1', age: 22, city: 'Mumbai', status: 'active' },
+  { name: 'User1', age: 25, city: 'Pune', status: 'inactive' }
+]
+```
+
+- deleteMany()
+
+```javascript
+db.users.deleteMany({name:"User1"})
+```
+
+Output
+```javascript
+db.users.find()
+Empty
+```
+
+2. Delete Collection
+```javascript
+db.users.drop()
+```
+
+Output
+```javascript
+userdb> show collections
+posts
+```
+
+3. Delete Database
+
+```javascript
+db.dropDatabase()
+```
+
+Output
+```javascript
+{ ok: 1, dropped: 'userdb' }
+```
