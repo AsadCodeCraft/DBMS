@@ -330,3 +330,16 @@ mysql> SELECT i.name
 +---------------+
 1 row in set (0.00 sec)
 ```
+> ### 14) Find the names of the instructors who taught only one course during the spring semester of 2001. 
+```javascript
+mysql> SELECT i.name
+    -> FROM instructors i
+    -> JOIN (
+    ->     SELECT empno, COUNT(*) AS course_count
+    ->     FROM grades
+    ->     WHERE sem = 'spring' AND year = 2001
+    ->     GROUP BY empno
+    -> ) AS instructor_courses ON i.empno = instructor_courses.empno
+    -> WHERE instructor_courses.course_count = 1;
+Empty set (0.01 sec)
+```
