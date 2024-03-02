@@ -18,12 +18,12 @@
 
 - **Use this command to Create Databse Backup**
 command: 
-```javascript
+```sql
   mysqldump -u root -p database_name > backup_file_name.sql
 ```
 - **Use this command to Restore Databse**
 command: 
-```javascript
+```sql
   mysql -u root -p database_name < backup_file_name.sql
 ```
 
