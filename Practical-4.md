@@ -22,7 +22,7 @@
 3. **Import CSV Data:**
   - Use `mongoimport` to import CSV data into a MongoDB collection:
     ```bash
-    mongoimport --db <database_name> --collection <collection_name> --type csv --headerline --file <path_to_csv_file>
+    mongoimport --db <database_name> --collection <collection_name> --type csv --headerline --file <path_to_csv>
     ```
     Replace `<database_name>`, `<collection_name>`, and `<path_to_csv_file>` with appropriate values.
 
