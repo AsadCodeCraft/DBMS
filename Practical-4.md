@@ -1,6 +1,5 @@
 ## ⌛ Importing Data into MongoDB using mongoimport
 ---
-### Steps:
 
 1. **Download MongoDB Database Tools:**
 
